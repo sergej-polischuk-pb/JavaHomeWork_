@@ -21,7 +21,6 @@ public class Calculator {
             // определим какой арифметический знак ввел пользователь
             switch (sign) {
                 case "+":
-                    //result = operand1 + operand2;
                     System.out.println("Полученный результат = " + (operand1 + operand2));
                     break;
                 case "-":
