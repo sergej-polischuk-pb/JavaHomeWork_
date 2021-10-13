@@ -21,17 +21,17 @@ public class Calculator {
             // определим какой арифметический знак ввел пользователь
             switch (sign) {
                 case "+":
-                    System.out.println("Полученный результат = " + (operand1 + operand2));
+                    System.out.println("Полученный результат : " + operand1 + "+" + operand2 + "=" + (operand1 + operand2));
                     break;
                 case "-":
-                    System.out.println("Полученный результат = " + (operand1 - operand2));
+                    System.out.println("Полученный результат : "  + operand1 + "-" + operand2 + "="+ (operand1 - operand2));
                     break;
                 case "*":
-                    System.out.println("Полученный результат = " + (operand1 * operand2));
+                    System.out.println("Полученный результат : " + operand1 + "*" + operand2 + "=" + (operand1 * operand2));
                     break;
                 case "/": {
                     if (operand2 == 0) System.out.println("Извините, но на НОЛЬ делить нельзя");
-                    else  System.out.println("Полученный результат = " + ((double) operand1)/operand2);
+                    else  System.out.println("Полученный результат "  +   operand1 + "/" + operand2 + "="+((double) operand1)/operand2);
                     break;
                 }
             }
