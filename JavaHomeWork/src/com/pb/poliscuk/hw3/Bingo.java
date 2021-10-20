@@ -20,20 +20,20 @@ public class Bingo {
         int int_random=0; //программа загадывает номер
         int user_number;  // число вводимое пользователем
         int counter=0; //счетчик угадываний числа пользователем
+        Scanner input = new Scanner(System.in);     //считываем введенный символ
         
         System.out.println("Сыграем в игру? Программа загадает число от 0 до 100, а вы попытаетесь его отгадать...");
+        do {
         System.out.print("Готовы?  (Y/N) - ");
-        Scanner input = new Scanner(System.in);     //считываем введенный символ
         user_ready=input.next().charAt(0);
-        user_ready=Character.toLowerCase(user_ready); // преобразовываем введенный символ в строчный
+        user_ready=Character.toUpperCase(user_ready); // преобразовываем введенный символ в строчный
         // если пользователь ответил - "No" - попрощаемся с ним и закроем программу
+        } while ((user_ready!='N') && (user_ready!='Y'));
         if (user_ready=='N') { System.out.println("Всего хорошего... Приходите еще."); System.exit(0);}
-       
 //***********   Игрок готов играть *************************
 do {
         int_random = ThreadLocalRandom.current().nextInt(1, 101); //программа загадывает номер в диапазоне 0..100
-        System.out.println("Я загадала число  - " + int_random);
-             do { 
+           do { 
                 // 
                   System.out.print("Ваше число? - "); 
                   user_number=input.nextInt();   counter++;//считываем число и увеличиваем счетчик попыток угадать число
@@ -46,7 +46,8 @@ do {
                       // если через 7 попыток пользователь не угадал число - спросим, будем продолжать угадывать или нет
                       if (counter!=0 && (counter % 7)==0) 
                       {
-                          System.out.println("Вы слишком долго не можете угадать число...  Будем продолжать?  Y/N ");
+                          System.out.println("\n Вы слишком долго не можете угадать число...");
+                          System.out.print("Будем продолжать?  Y/N ");
                           repeat=input.next().charAt(0);
                           repeat=Character.toUpperCase(repeat);
                           // Если продолжать не будем - прощаемся и закрываем программу
