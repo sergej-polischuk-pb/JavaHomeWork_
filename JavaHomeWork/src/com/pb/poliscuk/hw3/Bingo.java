@@ -1,6 +1,5 @@
 package com.pb.poliscuk.hw3;
 import java.util.Scanner;
-import java.io.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -11,8 +10,7 @@ public class Bingo {
     public static void main(String[] args) {
         char repeat;
         char user_ready;
-        
-        int int_random=0; //программа загадывает номер
+        int int_random; //программа загадывает номер
         int user_number;  // число вводимое пользователем
         int counter=0; //счетчик угадываний числа пользователем
         Scanner input = new Scanner(System.in);     //считываем введенный символ
