@@ -13,9 +13,10 @@ public class Bingo {
         int int_random; //программа загадывает номер
         int user_number;  // число вводимое пользователем
         int counter=0; //счетчик угадываний числа пользователем
-        Scanner input = new Scanner(System.in);     //считываем введенный символ
+        Scanner input = new Scanner(System.in);     //готовимся к считыванию клавитатуры
         
         System.out.println("Сыграем в игру? Программа загадает число от 0 до 100, а вы попытаетесь его отгадать...");
+        System.out.println("Вам дается 7 попыток... ");
         do {
         System.out.print("Готовы?  (Y/N) - ");
         user_ready=input.next().charAt(0);
