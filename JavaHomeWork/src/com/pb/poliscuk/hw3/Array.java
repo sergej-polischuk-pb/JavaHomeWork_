@@ -26,8 +26,12 @@ public class Array {
         summaElementovArray+=myArray[index_i];
                
         }
-        System.out.println("Введенный массив: " + Arrays.toString(myArray));             //выводим массив на консоль
-        System.out.println("Сумма всех элементов массива myArray = " + summaElementovArray);
+        //System.out.println("Введенный массив: " + Arrays.toString(myArray));             //выводим массив на консоль
+        //забыл.... просили выести массив в цикле...
+        System.out.print("Введенный массив : ");
+        for (index_i=0; index_i<=myArray.length-1; index_i++) System.out.print(myArray[index_i]+" ");
+        
+        System.out.println("\n Сумма всех элементов массива myArray = " + summaElementovArray);
         System.out.println("Количество положительных элементов в массиве - " + countPositiveValue);
          
 // сортировка массива пузырьком
@@ -43,7 +47,9 @@ public class Array {
                 }
                  }
                  }
-    System.out.println("Отсортированный массив: " + Arrays.toString(myArray));  //выводим результат на консоль
+    //System.out.println("Отсортированный массив: " + Arrays.toString(myArray));  //выводим результат на консоль
+    System.out.print("Отсортированный массив : ");
+    for (index_i=0; index_i<=myArray.length-1;index_i++) System.out.print(myArray[index_i]+ " ");
     }}
             
       
