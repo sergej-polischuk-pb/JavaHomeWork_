@@ -12,7 +12,6 @@ package com.pb.poliscuk.hw4;
  *
  * @author Poliscuk Sergej
  */
-import java.util.Arrays;
 
 public class CapitalLetter {
     public static void main (String[] args) {
@@ -35,8 +34,7 @@ public class CapitalLetter {
            
 */
         int i;
-        char upper_char;
-        
+               
         System.out.println(string_example);
       //   System.out.println(string_example.charAt(1));
         // Движемся в цикле по стрке в посиках символа "Пробел"
