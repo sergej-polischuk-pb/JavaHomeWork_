@@ -8,11 +8,6 @@
  */
 package com.pb.poliscuk.hw4;
 
-/**
- *
- * @author Poliscuk Sergej
- */
-
 public class CapitalLetter {
     public static void main (String[] args) {
         StringBuilder string_example = new StringBuilder ("Ехали медведи на велосипеде.\n" +
@@ -28,20 +23,19 @@ public class CapitalLetter {
         
 /*      Слова в языке разделяются симоволом "пробел"..
         Начинаем посимвольно анализировать строку.
-        1-ый символ строки вседа строчный - т.е. бука БОЛЬШАЯ
-        следующий за "пробелом" символ преобразовываем в верхний регистр
 */
         int i;  //счетчик для цикла
                
-        // Движемся в цикле по стрке в посиках символа "Пробел"
+        // Движемся в цикле по сторке в поисках символа "Пробел"
          for(i=0; i<=string_example.length()-1; i++)
           {
-              // Если я обнаруживаю в строке символ с кодом ASCII=32 - значит я нашел пробел
-              // значит следующему символу необходимо сделать UpperCase
-              if ((int) (string_example.charAt(i)) == 32) {
-            //      System.out.println("Опачки!!   Я нашел пробел \n");
-              string_example.setCharAt(i+1,Character.toUpperCase(string_example.charAt(i+1)));
-          }
+              // Если я обнаруживаю в строке символ "пробел"
+              // следующему символу необходимо сделать UpperCase
+             
+              if ((string_example.charAt(i)) == ' ')
+              {
+                string_example.setCharAt(i+1,Character.toUpperCase(string_example.charAt(i+1)));
+              }
               
           }
          // Выводим строку после преобразования символов в врехний регистр
