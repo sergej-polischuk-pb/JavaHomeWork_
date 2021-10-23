@@ -21,18 +21,11 @@ public class CapitalLetter {
               // следующему символу необходимо сделать UpperCase
              
               if ((string_example.charAt(i)) == ' ')
-              {
-                string_example.setCharAt(i+1,Character.toUpperCase(string_example.charAt(i+1)));
-              }
+                 string_example.setCharAt(i+1,Character.toUpperCase(string_example.charAt(i+1)));
             }
-        //System.out.println(string_example);
-        //return string_example.toString();
         return string_example.toString();
-   
    }
-   
-
-   
+    
     
     public static void main (String[] args) {
         StringBuilder string_ = new StringBuilder ("Ехали медведи на велосипеде.\n" +
