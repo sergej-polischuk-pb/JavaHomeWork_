@@ -34,7 +34,7 @@ public static  String  Letter_UpperCase_String(String string_example)
          //разобьем полученную строку на слова
          while(lineScan.hasNext()) {
          String word = lineScan.next(); 
-         // в каждом слове первый символ преобразовываем в верхний регистр
+         // в каждом слове первый символ преобразовываем в верхний регистр и добавляем его в новую строку
          upper_case_line += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " "; 
          }
                
