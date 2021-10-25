@@ -17,7 +17,7 @@ import java.util.Scanner;
 
 public class Anagram {
     
-    public static Boolean FindAnagram (String stringA, String stringB){
+    public static Boolean FindAnagram (String stringA, String stringB){ // на входе строкаА и строкаВ, на выходе True or False
         if (stringA.length()!=stringB.length())  //если длина строк разнится - это не анаграммы
           { 
               return false;
