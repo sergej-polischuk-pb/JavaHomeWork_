@@ -6,8 +6,8 @@
 
 РЕШЕНИЕ....
 
-1) загоняем строку в массив.
-2) повторяем для второго предложения.
+1) загоняем строку_А в массив_А.
+2) загоняем строку_В в массив_В.
 3) сортируем массивы по возрастанию
 4) сверяем элементы массива. Если находим не соответствие - строки не являются анаграммами
  */
@@ -18,25 +18,24 @@ import java.util.Scanner;
 public class Anagram {
     
     public static Boolean FindAnagram (String stringA, String stringB){
-        if (stringA.length()!=stringB.length()) 
+        if (stringA.length()!=stringB.length())  //если длина строк разнится - это не анаграммы
           { 
-              //System.out.println("Слова не являются анаграммами..");
               return false;
           }
-        char[] stringA_array = stringA.toCharArray();
+        char[] stringA_array = stringA.toCharArray(); // преобразовываем строки в массивы символов
         char[] stringB_array = stringB.toCharArray();
-        Arrays.sort(stringA_array);
+        Arrays.sort(stringA_array); // сортируем оба массива 
         Arrays.sort(stringB_array);
         
         int i=0;
-        for (i=0; i<stringA_array.length; i++)
+        for (i=0; i<stringA_array.length; i++) // проходим по всем элементам массива
            {
-              if (stringA_array[i]!=stringB_array[i]) 
+              if (stringA_array[i]!=stringB_array[i]) // и сравниваем элементы массивА[i]=массивB[i]
                { 
-                   return false;
+                   return false;                       // если элементы массива не совпадают - это не анаграммы
                }
            }
-        return true;
+        return true;  // Если все элементы массива совпали - введенные строки -  анаграммы
         }
     
     
