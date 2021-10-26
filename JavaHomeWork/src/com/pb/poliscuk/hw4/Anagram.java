@@ -22,6 +22,9 @@ public class Anagram {
           { 
               return false;
           }
+        // с помощью регулярных выражений отставим в строках только цифры и буквы
+        stringA=stringA.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ ]", "");
+        stringB=stringB.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ ]", "");
         char[] stringA_array = stringA.toCharArray(); // преобразовываем строки в массивы символов
         char[] stringB_array = stringB.toCharArray();
         Arrays.sort(stringA_array); // сортируем оба массива 
@@ -48,8 +51,8 @@ public class Anagram {
         String strB = input.nextLine();
                 
         System.out.println("Резуьтат проверки строк:");
-        // подсунем для обработки наши строки, прогнав через регулярные выражения. Оставляем в строках только: цифры, и буквы
-        if (FindAnagram(strA.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ ]", ""), strB.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ ]", "")))  System.out.println("Строки являются анаграммами");
+        // подсунем для обработки наши строки
+        if (FindAnagram(strA, strB))  System.out.println("Строки являются анаграммами");
           else System.out.println("Строки не являются анаграммами");
       
      
