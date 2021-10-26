@@ -46,9 +46,10 @@ public class Anagram {
         String strA = input.nextLine();
         System.out.print("Введите вторую строку....: ");
         String strB = input.nextLine();
-        
+                
         System.out.println("Резуьтат проверки строк:");
-        if (FindAnagram(strA, strB))  System.out.println("Строки являются анаграммами");
+        // подсунем для обработки наши строки, прогнав через регулярные выражения. Оставляем в строках только: цифры, и буквы
+        if (FindAnagram(strA.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ ]", ""), strB.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ ]", "")))  System.out.println("Строки являются анаграммами");
           else System.out.println("Строки не являются анаграммами");
       
      
