@@ -19,9 +19,12 @@ import java.util.Scanner;
 public class Anagram {
 
     public static Boolean FindAnagram(String stringA, String stringB) { // на входе строкаА и строкаВ, на выходе True or False
-           // с помощью регулярных выражений отставим в строках только цифры и буквы
+        // с помощью регулярных выражений отставим в строках только цифры и буквы
         stringA = stringA.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ]", "");
         stringB = stringB.replaceAll("[^\\da-zA-Zа-яёА-ЯЁ]", "");
+        stringA=stringA.toUpperCase();  //все символы в stringA & stringB сделаем большими.
+        stringB=stringB.toUpperCase();
+         
         if (stringA.length() != stringB.length()) //если длина строк разнится - это не анаграммы
         {
             return false;
