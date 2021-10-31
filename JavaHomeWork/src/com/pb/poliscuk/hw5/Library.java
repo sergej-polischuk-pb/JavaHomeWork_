@@ -9,8 +9,7 @@ public class Library {
     public static void main(String[] args) {
           
           bookLib[0].setBook("Java для чайников", "Чак Сфер", 2006);
-        
-   
-        //  bookLib[0].getBook();
+           
+          bookLib[0].getBook();
     }
 }
