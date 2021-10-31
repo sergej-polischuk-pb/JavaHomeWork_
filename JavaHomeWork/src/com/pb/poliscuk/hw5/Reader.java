@@ -1,7 +1,4 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
 package com.pb.poliscuk.hw5;
 
@@ -14,9 +11,24 @@ import java.util.Date;
 public class Reader {
 
     String userFIO; // ФИО пользователя библиотеки
-    int numberTicket; //номер читательского билета
+    String numberTicket; //номер читательского билета
     String faculty; //название факультета
-    Date yearBirthday; //год рождения
+    int yearBirthday; //год рождения
     String phoneNumber; // номер телефона пользователя
 
+     public void setReader(String userFIO, String numberTicket, String faculty, int yearBirthday, String phoneNumber) {
+        this.userFIO = userFIO;
+        this.numberTicket = numberTicket;
+        this.faculty = faculty;
+        this.yearBirthday = yearBirthday;
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void getReader() {
+        System.out.print(this.userFIO);
+        System.out.print(" - "+this.numberTicket);
+        System.out.print(" - \""+this.faculty+"\"");
+        System.out.print(" - "+this.yearBirthday);
+        System.out.println(" - "+this.phoneNumber);
+    }
 }
