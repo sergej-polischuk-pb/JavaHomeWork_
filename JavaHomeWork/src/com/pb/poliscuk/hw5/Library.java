@@ -4,7 +4,7 @@ package com.pb.poliscuk.hw5;
 
 public class Library {
 
-    public static  Book[] bookLib = new Book[5];
+   static  Book[] bookLib = new Book[5];
 
     public static void main(String[] args) {
           
