@@ -6,7 +6,7 @@ package com.pb.poliscuk.hw5;
  *
  * @author serg
  */
-import static com.pb.poliscuk.hw5.Library.UserLib;
+import static com.pb.poliscuk.hw5.Library.userLib;
 import java.util.Date;
 
 public class Reader {
@@ -51,14 +51,17 @@ public class Reader {
             System.out.print(nameBook[i] + " ");
         }
         
-     /* который будет принимать переменное количество объектов класса Book.
+}
+    /* который будет принимать переменное количество объектов класса Book.
         Выводит на консоль сообщение :
             "Петров В. В. взял книги: Приключения (Иванов И. И. 2000 г.), 
                                       Словарь (Сидоров А. В 1980 г.), 
                                       Энциклопедия (Гусев К. В. 2010 г.)".
-        
      */   
-    
-    
-}
+    public void takeBook(Book[] books, int ... index) {
+        System.out.print("\n" + this.userFIO + " взял книги:");
+        for (int i = 0; i < index.length; i++) {
+            System.out.print(books[index[i]].nameBook + "(" + books[index[i]].authorBook + books[index[i]].yearEditionBook + "); ");
+        }
+    }
 }
