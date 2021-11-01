@@ -1,11 +1,12 @@
 /*
  */
 package com.pb.poliscuk.hw5;
+import java.util.ArrayList;
 
 public class Library {
 
-    static Book[] bookLib = new Book[8];
-    static Reader[] userLib = new Reader[11];
+        static Book[] bookLib = new Book[8];
+        static Reader[] userLib = new Reader[11];
 
     public static void main(String[] args) {
         // заполним библиотеку книгами
@@ -21,6 +22,8 @@ public class Library {
         bookLib[6].setBook("Большая энциклопедия", "Гусев К.В.", 2019);
         bookLib[7].setBook("Словарь", "Сидоров А.В.", 1980);
 
+        
+    
         // пользователи библиотеки
         for (int i = 0; i < userLib.length; i++) {
             userLib[i] = new Reader();
