@@ -38,25 +38,7 @@ public class Book {
         System.out.println(" - " + this.yearEditionBook);
     }
 
-    /*
-    который будет принимать количество взятых книг. 
-Выводит на консоль сообщение 
-"Петров В. В. взял 3 книги".
-    */
-    static void takeBook(int countBook){
-        System.out.print("\n Петров В.В. взял "+ countBook +" книги");
-    }
-    
-    
-    /*  будет принимать переменное количество названий книг. 
-        Выводит на консоль сообщение
-        "Петров В. В. взял книги: Приключения, Словарь, Энциклопедия".
-     */
-    static void takeBook(String... nameBook) {
-        System.out.print("\n Петров В.В. взял книги: ");
-        for (int i = 0; i < nameBook.length; i++) {
-            System.out.print(nameBook[i] + " ");
-        }
+  
     }
 
-}
+
