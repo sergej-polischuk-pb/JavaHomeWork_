@@ -48,8 +48,8 @@ public class Library {
         for (int i = 0; i < UserLib.length; i++) {
             UserLib[i].getInfoUserLib();
         }
-        
+
         // метод takeBook принимает переменное кол-во переменных
-        Book.takeBook("Приключения","Словарь","Энциклопедия");
+        Book.takeBook("Приключения", "Словарь", "Энциклопедия");
     }
 }
