@@ -21,8 +21,6 @@ public class Library {
         bookLib[5].setBook("Приключения", "Артур Конан Дойль", 1978);
         bookLib[6].setBook("Большая энциклопедия", "Гусев К.В.", 2019);
         bookLib[7].setBook("Словарь", "Сидоров А.В.", 1980);
-
-        
     
         // пользователи библиотеки
         for (int i = 0; i < userLib.length; i++) {
@@ -67,5 +65,11 @@ public class Library {
         // "Петров В. В. взял книги: Приключения (Иванов И. И. 2000 г.), Словарь (Сидоров А. В 1980 г.), Энциклопедия (Гусев К. В. 2010 г.)".
         // Передаю методу массив книг и элементы массива (книги) которые взял пользователь
         userLib[9].takeBook(bookLib, 1, 3, 5, 6, 7);
+                
+        System.out.println("\n\n А теперь сделаем возврат книг .....");
+        
+        userLib[9].returnBook(3);
+        userLib[9].returnBook(bookLib[5].nameBook, bookLib[6].nameBook, bookLib[7].nameBook);
+        userLib[9].returnBook(bookLib, 1, 3, 5, 6, 7);
     }
 }

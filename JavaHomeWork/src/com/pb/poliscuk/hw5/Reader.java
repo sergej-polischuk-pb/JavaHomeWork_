@@ -65,4 +65,24 @@ public class Reader {
             System.out.print("\""+books[index[i]].nameBook + "\" (" + books[index[i]].authorBook + books[index[i]].yearEditionBook + "); ");
         }
     }
+    
+    // выводит на консоль сообщения: 
+    // "Петров В. В. вернул 3 книги"
+    public void returnBook(int countBook) {
+        System.out.print("\n" + this.userFIO + " вернул " + countBook + " книги");
+    }
+    
+    public void returnBook(String... nameBook) {
+        System.out.print("\n" + this.userFIO + " вернул книги: ");
+        for (int i = 0; i < nameBook.length; i++) {
+            System.out.print("\"" + nameBook[i] + "\", ");
+        }
+    }
+    
+    public void returnBook(Book[] books, int... index) {
+        System.out.print("\n" + this.userFIO + " вернул книги:");
+        for (int i = 0; i < index.length; i++) {
+            System.out.print("\""+books[index[i]].nameBook + "\" (" + books[index[i]].authorBook + books[index[i]].yearEditionBook + "); ");
+        }
+    }
 }
