@@ -36,8 +36,8 @@ public class Reader {
        Выводит на консоль сообщение 
        "Петров В. В. взял 3 книги".
     */
-    static void takeBook(int countBook){
-        System.out.print("\n Петров В.В. взял "+ countBook +" книги");
+    static void takeBook(String FIO, int countBook){
+        System.out.print("\n"+ FIO + " взял " + countBook +" книги");
     }
     
      /*  будет принимать переменное количество названий книг. 
