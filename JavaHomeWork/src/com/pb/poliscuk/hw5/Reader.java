@@ -6,6 +6,7 @@ package com.pb.poliscuk.hw5;
  *
  * @author serg
  */
+import static com.pb.poliscuk.hw5.Library.UserLib;
 import java.util.Date;
 
 public class Reader {
@@ -36,8 +37,8 @@ public class Reader {
        Выводит на консоль сообщение 
        "Петров В. В. взял 3 книги".
     */
-    static void takeBook(String FIO, int countBook){
-        System.out.print("\n"+ FIO + " взял " + countBook +" книги");
+    static void takeBook(int countBook){
+        System.out.print("\n"+ UserLib[9].userFIO +" взял " + countBook +" книги");
     }
     
      /*  будет принимать переменное количество названий книг. 
