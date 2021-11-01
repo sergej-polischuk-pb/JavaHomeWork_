@@ -16,7 +16,7 @@ public class Reader {
     int yearBirthday; //год рождения
     String phoneNumber; // номер телефона пользователя
 
-     public void setReader(String userFIO, String numberTicket, String faculty, int yearBirthday, String phoneNumber) {
+    public void UserLib(String userFIO, String numberTicket, String faculty, int yearBirthday, String phoneNumber) {
         this.userFIO = userFIO;
         this.numberTicket = numberTicket;
         this.faculty = faculty;
@@ -24,11 +24,11 @@ public class Reader {
         this.phoneNumber = phoneNumber;
     }
 
-    public void getReader() {
+    public void getInfoUserLib() {
         System.out.print(this.userFIO);
-        System.out.print(" - "+this.numberTicket);
-        System.out.print(" - \""+this.faculty+"\"");
-        System.out.print(" - "+this.yearBirthday);
-        System.out.println(" - "+this.phoneNumber);
+        System.out.print(" - " + this.numberTicket);
+        System.out.print(" - \"" + this.faculty + "\"");
+        System.out.print(" - " + this.yearBirthday + "р.н.");
+        System.out.println(" - " + this.phoneNumber);
     }
 }

@@ -18,10 +18,24 @@ public class Book {
         this.yearEditionBook = yearEditionBook;
     }
 
-    public void getBook() {
-        System.out.print("\""+this.nameBook+"\"");
-        System.out.print(" - "+this.authorBook);
-        System.out.println(" - "+this.yearEditionBook);
+    public void getInfoBook() {
+        System.out.print("\"" + this.nameBook + "\"");
+        System.out.print(" - " + this.authorBook);
+        System.out.println(" - " + this.yearEditionBook);
     }
+    
+    /*  будет принимать переменное количество названий книг. 
+        Выводит на консоль сообщение
+        "Петров В. В. взял книги: Приключения, Словарь, Энциклопедия".
+    */
+    static void takeBook(String ... nameBook){
+        System.out.print("\n Петров В.В. взял книги: ");
+        for(int i = 0; i <nameBook.length; i++) {
+          System.out.print(nameBook[i]+" ");
+        }
+        }
+    
+    
+    
 
 }
