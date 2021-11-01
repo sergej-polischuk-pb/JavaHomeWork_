@@ -52,12 +52,12 @@ public class Library {
         //  который будет принимать количество взятых книг. 
         // Выводит на консоль сообщение 
         // "Петров В. В. взял 3 книги".
-        Reader.takeBook(3);
+        UserLib[9].takeBook(3);
         
         // метод takeBook, который будет принимать переменное количество названий книг. 
         // Выводит на консоль сообщение
         // "Петров В. В. взял книги: Приключения, Словарь, Энциклопедия".
-        Reader.takeBook(bookLib[5].nameBook, bookLib[6].nameBook, bookLib[7].nameBook);
+        UserLib[9].takeBook(bookLib[5].nameBook, bookLib[6].nameBook, bookLib[7].nameBook);
         
         
     }
