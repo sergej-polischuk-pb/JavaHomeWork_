@@ -32,33 +32,34 @@ public class Reader {
         System.out.print(" - " + this.yearBirthday + "р.н.");
         System.out.println(" - " + this.phoneNumber);
     }
-    
-      /* который будет принимать количество взятых книг. 
+
+    /* который будет принимать количество взятых книг. 
        Выводит на консоль сообщение 
        "Петров В. В. взял 3 книги".
-    */
-    public void takeBook(int countBook){
-        System.out.print("\n"+ this.userFIO +" взял " + countBook +" книги");
+     */
+    public void takeBook(int countBook) {
+        System.out.print("\n" + this.userFIO + " взял " + countBook + " книги");
     }
-    
-     /*  будет принимать переменное количество названий книг. 
+
+    /*  будет принимать переменное количество названий книг. 
         Выводит на консоль сообщение
         "Петров В. В. взял книги: Приключения, Словарь, Энциклопедия".
      */
     public void takeBook(String... nameBook) {
-        System.out.print("\n" + this.userFIO+ "взял книги: ");
+        System.out.print("\n" + this.userFIO + "взял книги: ");
         for (int i = 0; i < nameBook.length; i++) {
             System.out.print(nameBook[i] + " ");
         }
-        
-}
+
+    }
+
     /* который будет принимать переменное количество объектов класса Book.
         Выводит на консоль сообщение :
             "Петров В. В. взял книги: Приключения (Иванов И. И. 2000 г.), 
                                       Словарь (Сидоров А. В 1980 г.), 
                                       Энциклопедия (Гусев К. В. 2010 г.)".
-     */   
-    public void takeBook(Book[] books, int ... index) {
+     */
+    public void takeBook(Book[] books, int... index) {
         System.out.print("\n" + this.userFIO + " взял книги:");
         for (int i = 0; i < index.length; i++) {
             System.out.print(books[index[i]].nameBook + "(" + books[index[i]].authorBook + books[index[i]].yearEditionBook + "); ");

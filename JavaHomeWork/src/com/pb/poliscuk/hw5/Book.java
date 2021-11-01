@@ -25,7 +25,6 @@ public class Book {
     /**
      * год издания книги *
      */
-
     public void setBook(String nameBook, String authorBook, int yearEditionBook) {
         this.nameBook = nameBook;
         this.authorBook = authorBook;
@@ -38,7 +37,4 @@ public class Book {
         System.out.println(" - " + this.yearEditionBook);
     }
 
-  
-    }
-
-
+}
