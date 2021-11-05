@@ -13,14 +13,24 @@ package com.pb.poliscuk.hw6;
 public class Dog extends Animal {
     private String doesNotLive="не любит кошек....";
     
-  @Override
-    void makeNoise() {
+  @Override void makeNoise() {
         System.out.println("Грызть косточку....");
     }
     
-   @Override
-   void eat() {
+   @Override void eat() {
    System.out.println ("Грызть косточку");
+   }
+   
+   @Override public String toString() {
+       return "toString overriding..";
+   }
+   
+   @Override public boolean equals(Object obj) {
+       return true;
+   }
+   
+   @Override public int hashCode() {
+       return 777;
    }
    
   

@@ -11,16 +11,12 @@ package com.pb.poliscuk.hw6;
  */
 public class Cat extends Animal {
     public String doesNotLive="Не любит собак ....";
-    
-    
-    
-    @Override
-    void makeNoise() {
+      
+    @Override void makeNoise() {
         System.out.println("Ловить птичек и мышей....");
     }
     
-    @Override
-   void eat() {
+    @Override void eat() {
    System.out.println ("кушает мясо и молоко...");
    }
 }

@@ -12,13 +12,11 @@ package com.pb.poliscuk.hw6;
 public class Horse extends Animal {
     private String doesNotLive="Не любит насекомых, резкие звуки..";
    
-    @Override
-    void makeNoise() {
+    @Override  void makeNoise() {
         System.out.println("Поваляться в земле, снегу, почесаться об стену, забор...");
     }
     
-    @Override
-   void eat() {
+    @Override void eat() {
    System.out.println ("Кушает траву и любит овес");
    }
 }
