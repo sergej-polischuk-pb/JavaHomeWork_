@@ -11,7 +11,7 @@ package com.pb.poliscuk.hw6;
  */
 
 public class Dog extends Animal {
-    private String doesNotLive;
+    private String doesNotLive="не любит кошек....";
     
   @Override
     void makeNoise() {
@@ -22,4 +22,6 @@ public class Dog extends Animal {
    void eat() {
    System.out.println ("Грызть косточку");
    }
+   
+  
 }

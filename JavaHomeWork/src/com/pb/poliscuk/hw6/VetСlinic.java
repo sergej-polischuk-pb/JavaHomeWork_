@@ -9,16 +9,15 @@ package com.pb.poliscuk.hw6;
  *
  * @author serg
  */
-public class Main {
+public class VetСlinic {
 
     public static void main(String[] args) {
 
-   //     Animal myDog = new Dog();
+ 
         Animal myCat = new Cat();
-        Animal myHorse = new Horse();
-        
-          myCat.food="мясо и молоко";
-          myCat.makeNoise();
+        myCat.food="мясо и молоко";
+        myCat.makeNoise();
+          
          
 
         
