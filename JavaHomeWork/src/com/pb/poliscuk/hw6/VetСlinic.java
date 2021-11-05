@@ -1,26 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.pb.poliscuk.hw6;
 
-/**
- *
- * @author serg
- */
 public class VetСlinic {
 
-    public static void main(String[] args) {
-
- 
-        Animal myCat = new Cat();
-        myCat.food="мясо и молоко";
-        myCat.makeNoise();
-          
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+       
          
-
+        Animal[] myAnimal = new Animal[3] ;
+        myAnimal[0]= new Dog();
+        myAnimal[1] = new Cat();
+        myAnimal[2] = new Horse();
+        
+        
+     Class veterinarian = Class.forName("Veterinarian");
+        Object object = veterinarian.newInstance();
+        
+        for (int i=0; i<myAnimal.length; i++)
+        {
+           
+        }
         
     }
+    }
 
-}

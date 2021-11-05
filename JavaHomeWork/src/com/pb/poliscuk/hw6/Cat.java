@@ -19,4 +19,16 @@ public class Cat extends Animal {
     @Override void eat() {
    System.out.println ("кушает мясо и молоко...");
    }
+    
+     @Override public String toString() {
+       return "toString overriding.. Cat";
+   }
+   
+   @Override public boolean equals(Object obj) {
+       return false;
+   }
+   
+   @Override public int hashCode() {
+       return 666;
+   }
 }

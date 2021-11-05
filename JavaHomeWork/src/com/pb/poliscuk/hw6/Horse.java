@@ -19,4 +19,16 @@ public class Horse extends Animal {
     @Override void eat() {
    System.out.println ("Кушает траву и любит овес");
    }
+    
+     @Override public String toString() {
+       return "toString overriding..  Horse";
+   }
+   
+   @Override public boolean equals(Object obj) {
+       return true;
+   }
+   
+   @Override public int hashCode() {
+       return 999;
+   }
 }

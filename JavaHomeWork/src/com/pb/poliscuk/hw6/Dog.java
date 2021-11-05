@@ -22,7 +22,7 @@ public class Dog extends Animal {
    }
    
    @Override public String toString() {
-       return "toString overriding..";
+       return "toString overriding.. Dog";
    }
    
    @Override public boolean equals(Object obj) {
