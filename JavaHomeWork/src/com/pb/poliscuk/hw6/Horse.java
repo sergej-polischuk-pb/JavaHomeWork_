@@ -27,15 +27,7 @@ public class Horse extends Animal implements Serializable {
 
     public Horse(String food, String location, double weight) {
         this(food, location);
-        this.weight = weight;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
+        
     }
 
     @Override
@@ -61,7 +53,6 @@ public class Horse extends Animal implements Serializable {
         }
 
         Horse horse = (Horse) o;
-
         return Double.compare(horse.weight, weight) == 0;
     }
 
@@ -79,7 +70,6 @@ public class Horse extends Animal implements Serializable {
         return "Horse{"
                 + "food: '" + getFood() + '\''
                 + ", location: '" + getLocation() + '\''
-                + ", weight = " + weight
                 + '}';
     }
 
@@ -97,8 +87,7 @@ public class Horse extends Animal implements Serializable {
             is.defaultReadObject();
             this.setFood((String) is.readObject());
             this.setLocation((String) is.readObject());
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException | ClassNotFoundException e) {
         }
     }
 }
