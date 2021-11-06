@@ -9,6 +9,7 @@ package com.pb.poliscuk.hw6;
  *
  * @author serg
  */
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -87,8 +88,7 @@ public class Horse extends Animal implements Serializable {
             os.defaultWriteObject();
             os.writeObject(getFood());
             os.writeObject(getLocation());
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (IOException e) {
         }
     }
 

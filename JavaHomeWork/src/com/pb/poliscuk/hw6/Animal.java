@@ -1,7 +1,5 @@
 package com.pb.poliscuk.hw6;
 
-import java.util.Objects;
-
 public abstract class Animal {
 
     public String food;       // что животное любит кушать
