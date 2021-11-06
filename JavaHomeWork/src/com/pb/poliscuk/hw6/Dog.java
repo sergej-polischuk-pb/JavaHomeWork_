@@ -5,33 +5,64 @@
  */
 package com.pb.poliscuk.hw6;
 
-/**
- *
- * @author serg
- */
-
 public class Dog extends Animal {
-    private String doesNotLive="не любит кошек....";
-    
-  @Override void makeNoise() {
-        System.out.println("Грызть косточку....");
+
+    private String name;
+
+    public Dog() {
     }
-    
-   @Override void eat() {
-   System.out.println ("Грызть косточку");
-   }
-   
-   @Override public String toString() {
-       return "toString overriding.. Dog";
-   }
-   
-   @Override public boolean equals(Object obj) {
-       return true;
-   }
-   
-   @Override public int hashCode() {
-       return 777;
-   }
-   
-  
+
+    public Dog(String food, String location) {
+        super(food, location);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Собака ест.");
+    }
+
+    @Override
+    public String makeNoise() {
+        return "Гав-гав-гав!!!";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Dog)) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
+
+        Dog dog = (Dog) o;
+
+        return name != null ? name.equals(dog.name) : dog.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog{"
+                + "food='" + getFood() + '\''
+                + ", location='" + getLocation() + '\''
+                + '}';
+    }
 }

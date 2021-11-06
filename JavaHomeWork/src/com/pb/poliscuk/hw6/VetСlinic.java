@@ -1,32 +1,16 @@
 package com.pb.poliscuk.hw6;
 
-import java.lang.reflect.Constructor;
-import java.util.Arrays;
-
 public class VetСlinic {
 
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+    public static void main(String[] args) {
+        Veterinarian veterinarian = new Veterinarian();
+        Animal[] animals = new Animal[3];
+        animals[0] = new Dog("Мясо и косточки", "В будке возле дома");
+        animals[1] = new Cat("Молоко и рыба", "В доме где живут люди");
+        animals[2] = new Horse("Сено и овес", "Конюшня");
 
-        Animal[] myAnimal = new Animal[3];
-         Class clazz = myAnimal.getClass();
-        myAnimal[0] = new Dog();
-        myAnimal[1] = new Cat();
-        myAnimal[2] = new Horse();
-
-        System.out.println(clazz.getName());
-        System.out.println(Arrays.toString(clazz.getMethods()));
-        
-        
-      //  Class veterinarian = Class.forName("Veterinarian");
-      //  Object object = veterinarian.newInstance();
-        Class myClinic = Class.forName("Veterinarian");
-        
-
-      
-      
-
-        for (int i = 0; i < myAnimal.length; i++) {
-         //   ((Veterinarian)object).treatAnimal(myAnimal[i]);
+        for (Animal animal : animals) {
+            veterinarian.treatAnimal(animal);
         }
     }
 }

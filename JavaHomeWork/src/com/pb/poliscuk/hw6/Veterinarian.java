@@ -10,9 +10,8 @@ package com.pb.poliscuk.hw6;
  * @author serg
  */
 public class Veterinarian {
-   public void treatAnimal(Animal animal){
-       
-       System.out.println(animal.food);
-       System.out.println(animal.location);
-   } 
+
+    public void treatAnimal(Animal animal) {
+        System.out.println(animal);
+    }
 }
